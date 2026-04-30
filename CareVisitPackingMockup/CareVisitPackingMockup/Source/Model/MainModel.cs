@@ -1,6 +1,10 @@
-﻿namespace CareVisitPackingMockup
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace CareVisitPackingMockup
 {
-    internal class MainModel
+    internal partial class MainModel : ObservableObject
     {
+        [ObservableProperty]
+        private CareHandbookDataModel careHandbookDataModel = new CareHandbookDataModel();
     }
 }

@@ -1,0 +1,278 @@
+{
+  "medicalItemCatalogModel": {
+    "items": [
+      {
+        "id": "11111111-1111-1111-1111-111111111111",
+        "name": "Remiss eller digital beställning",
+        "category": "Administration",
+        "description": "Underlag för provtagning eller annan planerad åtgärd."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111112",
+        "name": "Etiketter för märkning av provrör",
+        "category": "Administration",
+        "description": "Etiketter för korrekt märkning av provrör enligt lokal rutin."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111113",
+        "name": "Provtagningsrör",
+        "category": "Provtagning",
+        "description": "Rör som väljs enligt beställda analyser och lokal provtagningsanvisning."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111114",
+        "name": "Kanyl med integrerat stickskydd och hållare",
+        "category": "Provtagning",
+        "description": "Stickskyddad produkt för venös provtagning."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111115",
+        "name": "Stas eller blodtrycksmanschett",
+        "category": "Provtagning",
+        "description": "Används för att underlätta venös provtagning."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111116",
+        "name": "Skyddshandskar",
+        "category": "Vårdhygien",
+        "description": "Engångshandskar för moment med risk för kontakt med kroppsvätskor eller kontaminerat material."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111117",
+        "name": "Engångs plastförkläde",
+        "category": "Vårdhygien",
+        "description": "Engångsförkläde vid risk att arbetskläder förorenas."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111118",
+        "name": "Klorhexidinsprit 5 mg/mL eller motsvarande",
+        "category": "Desinfektion",
+        "description": "Huddesinfektionsmedel när punktionsställe ska desinfekteras."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111119",
+        "name": "Kompress eller tork",
+        "category": "Förbrukningsmaterial",
+        "description": "Används vid provtagning, rengöring eller omläggning beroende på moment."
+      },
+      {
+        "id": "11111111-1111-1111-1111-11111111111a",
+        "name": "Plåster",
+        "category": "Förbrukningsmaterial",
+        "description": "För täckning efter exempelvis provtagning."
+      },
+      {
+        "id": "11111111-1111-1111-1111-11111111111b",
+        "name": "Kärl för skärande, stickande eller smittförande avfall",
+        "category": "Avfall",
+        "description": "Behållare för säkert omhändertagande av stickande och smittförande avfall."
+      },
+      {
+        "id": "11111111-1111-1111-1111-11111111111c",
+        "name": "Förband till aktuellt sår",
+        "category": "Sårbehandling",
+        "description": "Förband väljs utifrån sårets behov och lokal ordination."
+      },
+      {
+        "id": "11111111-1111-1111-1111-11111111111d",
+        "name": "Ren behållare med kroppstempererat kranvatten",
+        "category": "Sårbehandling",
+        "description": "Kan användas för rengöring vid ren rutin när dusch inte är lämplig."
+      },
+      {
+        "id": "11111111-1111-1111-1111-11111111111e",
+        "name": "Kräm, salva eller hudskydd enligt ordination",
+        "category": "Sårbehandling",
+        "description": "Eventuellt hudskydd eller lokal behandling enligt ordination."
+      },
+      {
+        "id": "11111111-1111-1111-1111-11111111111f",
+        "name": "Ytdesinfektion med tensid",
+        "category": "Desinfektion",
+        "description": "Används för uppdukningsyta eller punktdesinfektion enligt lokal rutin."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111120",
+        "name": "Spruta enligt ordinerad läkemedelsmängd",
+        "category": "Injektion",
+        "description": "Sprutstorlek väljs efter mängden läkemedel som ska administreras."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111121",
+        "name": "Stickskyddad injektionskanyl",
+        "category": "Injektion",
+        "description": "Kanyllängd och lumen väljs efter vävnad och läkemedlets viskositet."
+      },
+      {
+        "id": "11111111-1111-1111-1111-111111111122",
+        "name": "Läkemedel enligt ordination",
+        "category": "Läkemedel",
+        "description": "Ordinerat läkemedel; hanteras enligt ordination, Fass/bipacksedel och tillverkarens anvisningar."
+      }
+    ]
+  },
+  "careTypes": [
+    {
+      "id": "22222222-2222-2222-2222-222222222221",
+      "name": "Venös blodprovtagning",
+      "description": "Exempel på packlista för venös provtagning i hemsjukvård eller motsvarande mockup-scenario.",
+      "handbookReference": "https://www.vardhandboken.se/undersokning-och-provtagning/blodprov/blodprov-venos-provtagning/forberedelser/",
+      "packingItems": [
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111111",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Behövs som beställningsunderlag för provtagningen."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111112",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Behövs för märkning av provrör."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111113",
+          "defaultQuantity": 4,
+          "isMandatory": true,
+          "reason": "Antal och typ styrs av beställda analyser."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111114",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Vårdhandboken anger kanyl med integrerat stickskydd och hållare som provtagningsmaterial."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111115",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Behövs för venös provtagning."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111116",
+          "defaultQuantity": 2,
+          "isMandatory": true,
+          "reason": "Skyddshandskar ingår i material för venös provtagning."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111117",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Plastförkläde ingår i material för venös provtagning."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111118",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Används för desinfektion av punktionsstället enligt anvisning."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111119",
+          "defaultQuantity": 3,
+          "isMandatory": true,
+          "reason": "Kompress eller tork ingår i materiallistan."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-11111111111a",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Behövs efter provtagning."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-11111111111b",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Behövs för skärande, stickande eller smittförande avfall."
+        }
+      ]
+    },
+    {
+      "id": "22222222-2222-2222-2222-222222222222",
+      "name": "Sårbehandling enligt ren rutin",
+      "description": "Exempel på packlista för enklare såromläggning enligt ren rutin i en prototyp.",
+      "handbookReference": "https://www.vardhandboken.se/vard-och-behandling/hud-och-sar/sarbehandling/sarbehandling-enligt-ren-och-steril-rutin/",
+      "packingItems": [
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111116",
+          "defaultQuantity": 4,
+          "isMandatory": true,
+          "reason": "Skyddshandskar anges som material vid sårbehandling enligt ren rutin."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111117",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Engångs plastförkläde anges som material vid sårbehandling enligt ren rutin."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-11111111111c",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Förband till aktuellt sår ingår i materiallistan."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111119",
+          "defaultQuantity": 10,
+          "isMandatory": true,
+          "reason": "Kompresser ingår i materiallistan och används vid rengöring."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-11111111111d",
+          "defaultQuantity": 1,
+          "isMandatory": false,
+          "reason": "Behövs om rengöring med dusch inte är lämplig i mockup-scenariot."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-11111111111e",
+          "defaultQuantity": 1,
+          "isMandatory": false,
+          "reason": "Eventuell kräm, salva eller hudskydd kan behövas beroende på ordination."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-11111111111f",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Uppdukningsyta och använda arbetsytor behöver kunna desinfekteras."
+        }
+      ]
+    },
+    {
+      "id": "22222222-2222-2222-2222-222222222223",
+      "name": "Subkutan injektion",
+      "description": "Exempel på packlista för subkutan injektion i en prototyp. Val styrs av läkemedel, ordination och lokal rutin.",
+      "handbookReference": "https://www.vardhandboken.se/vard-och-behandling/lakemedelsbehandling/injektioner/subkutan-sc/",
+      "packingItems": [
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111120",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Sprutans storlek väljs efter mängden läkemedel som ska administreras."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111121",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Stickskyddade kanyler ska användas."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111122",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Läkemedlet styrs av ordination och ska kontrolleras mot relevanta anvisningar."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-111111111116",
+          "defaultQuantity": 2,
+          "isMandatory": true,
+          "reason": "Basala hygienrutiner och lokal rutin styr användning av skyddshandskar."
+        },
+        {
+          "medicalItemId": "11111111-1111-1111-1111-11111111111b",
+          "defaultQuantity": 1,
+          "isMandatory": true,
+          "reason": "Använd kanyl ska kunna kasseras säkert."
+        }
+      ]
+    }
+  ]
+}
