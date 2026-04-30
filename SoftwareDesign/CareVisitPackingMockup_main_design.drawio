@@ -1,0 +1,31 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="Y1uknOQ5V1BMJH2y6W-H">
+    <mxGraphModel dx="1422" dy="898" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YQsfWVgQJPUuLz2Me0Bg-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" value="CareTypeModel" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="YQsfWVgQJPUuLz2Me0Bg-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" value="MainModel" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YQsfWVgQJPUuLz2Me0Bg-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" value="CareHandbookDataModel" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="YQsfWVgQJPUuLz2Me0Bg-4" edge="1" parent="1" source="YQsfWVgQJPUuLz2Me0Bg-3" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;shadow=1;" target="YQsfWVgQJPUuLz2Me0Bg-2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="180" y="610" as="sourcePoint" />
+            <mxPoint x="340" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YQsfWVgQJPUuLz2Me0Bg-5" edge="1" parent="1" source="YQsfWVgQJPUuLz2Me0Bg-1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;shadow=1;" target="YQsfWVgQJPUuLz2Me0Bg-3" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="380" y="550" as="sourcePoint" />
+            <mxPoint x="540" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
