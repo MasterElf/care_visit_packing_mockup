@@ -6,9 +6,12 @@
 
         public void Initialize()
         {
-            CareHandbookJsonDataLoader careHandbookJsonDataLoader = new CareHandbookJsonDataLoader();
+            CareHandbookDataModel? careHandbookDataModel = CareHandbookJsonDataLoader.LoadFromFile("ContentData/care-handbook-example-data.json");
 
-            MainModel.CareHandbookDataModel = careHandbookJsonDataLoader.LoadFromFile("ContentData/care-handbook-example-data.json");
+            if (careHandbookDataModel != null)
+            {
+                MainModel.CareHandbookDataModel = careHandbookDataModel;
+            }
         }
     }
 }

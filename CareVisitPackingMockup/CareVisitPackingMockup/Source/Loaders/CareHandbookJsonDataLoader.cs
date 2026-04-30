@@ -6,46 +6,25 @@ namespace CareVisitPackingMockup
 {
     public sealed class CareHandbookJsonDataLoader
     {
-        private readonly JsonSerializerOptions serializerOptions;
-
-        public CareHandbookJsonDataLoader()
-            : this(CreateDefaultSerializerOptions())
+        public static CareHandbookDataModel? LoadFromFile(string filePath)
         {
-        }
-
-        public CareHandbookJsonDataLoader(JsonSerializerOptions serializerOptions)
-        {
-            serializerOptions = serializerOptions ?? throw new ArgumentNullException(nameof(serializerOptions));
-        }
-
-        public CareHandbookDataModel LoadFromFile(string filePath)
-        {
-            ThrowIfFilePathIsInvalid(filePath);
-
-            if (!File.Exists(filePath))
+            if (File.Exists(filePath))
             {
-                throw new FileNotFoundException("The care handbook data file could not be found.", filePath);
+                return LoadFromJson(File.ReadAllText(filePath));
             }
 
-            string json = File.ReadAllText(filePath);
-            return LoadFromJson(json);
+            // TODO: Could not load a care handbook. Return an empty one.
+            return new CareHandbookDataModel();
         }
 
-        public CareHandbookDataModel LoadFromJson(string json)
+        public static CareHandbookDataModel? LoadFromJson(string json)
         {
-            if (string.IsNullOrWhiteSpace(json))
+            if (!string.IsNullOrWhiteSpace(json))
             {
-                throw new ArgumentException("JSON content must not be empty.", nameof(json));
+                return JsonSerializer.Deserialize<CareHandbookDataModel>(json, CreateDefaultSerializerOptions());
             }
 
-            CareHandbookDataModel? dataModel = JsonSerializer.Deserialize<CareHandbookDataModel>(json, CreateDefaultSerializerOptions());
-
-            if (dataModel is not null)
-            {
-                return dataModel;
-            }
-
-            throw new InvalidDataException("The JSON content did not contain a valid care handbook data model.");
+            return null;
         }
 
         public static JsonSerializerOptions CreateDefaultSerializerOptions()
@@ -54,21 +33,8 @@ namespace CareVisitPackingMockup
             {
                 WriteIndented = true,
                 PropertyNameCaseInsensitive = true,
-                Converters =
-                {
-                    new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)
-                }
+                Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
             };
-        }
-
-        private void ThrowIfFilePathIsInvalid(string filePath)
-        {
-            if (!string.IsNullOrWhiteSpace(filePath))
-            {
-                return;
-            }
-
-            throw new ArgumentException("File path must not be empty.", nameof(filePath));
         }
     }
 }
