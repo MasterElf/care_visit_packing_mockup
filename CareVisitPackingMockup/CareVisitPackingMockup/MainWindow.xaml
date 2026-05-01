@@ -4,9 +4,52 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CareVisitPackingMockup"
+        xmlns:ad="https://github.com/Dirkster99/AvalonDock"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Press me" Click="Button_Click" />
+        <ad:DockingManager x:Name="DockManager">
+            <ad:LayoutRoot>
+                <ad:LayoutPanel Orientation="Horizontal">
+
+                    <ad:LayoutAnchorablePane DockWidth="250">
+                        <ad:LayoutAnchorable Title="Navigation"
+                                             ContentId="NavigationPanel"
+                                             CanClose="False">
+                            <!--<panels:NavigationPanelView />-->
+                        </ad:LayoutAnchorable>
+                    </ad:LayoutAnchorablePane>
+
+                    <ad:LayoutPanel Orientation="Vertical">
+
+                        <ad:LayoutDocumentPane>
+                            <ad:LayoutDocument Title="Care Handbook"
+                                               ContentId="CareHandbookDocument"
+                                               CanClose="False">
+                                <local:CareHandbookView DataContext="{Binding CareHandbookDataModel}"/>
+                            </ad:LayoutDocument>
+                        </ad:LayoutDocumentPane>
+
+                        <ad:LayoutAnchorablePane DockHeight="220">
+                            <ad:LayoutAnchorable Title="Output"
+                                                 ContentId="OutputPanel"
+                                                 CanClose="False">
+                                <!--<panels:OutputPanelView />-->
+                            </ad:LayoutAnchorable>
+                        </ad:LayoutAnchorablePane>
+
+                    </ad:LayoutPanel>
+
+                    <ad:LayoutAnchorablePane DockWidth="300">
+                        <ad:LayoutAnchorable Title="Properties"
+                                             ContentId="PropertiesPanel"
+                                             CanClose="False">
+                            <!--<panels:PropertiesPanelView />-->
+                        </ad:LayoutAnchorable>
+                    </ad:LayoutAnchorablePane>
+
+                </ad:LayoutPanel>
+            </ad:LayoutRoot>
+        </ad:DockingManager>
     </Grid>
 </Window>
