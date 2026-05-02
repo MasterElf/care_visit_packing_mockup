@@ -6,47 +6,33 @@
         xmlns:local="clr-namespace:CareVisitPackingMockup"
         xmlns:ad="https://github.com/Dirkster99/AvalonDock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="1400">
     <Grid>
         <ad:DockingManager x:Name="DockManager">
             <ad:LayoutRoot>
-                <ad:LayoutPanel Orientation="Horizontal">
+                <ad:LayoutPanel Orientation="Vertical">
 
-                    <ad:LayoutAnchorablePane DockWidth="250">
-                        <ad:LayoutAnchorable Title="Navigation"
-                                             ContentId="NavigationPanel"
-                                             CanClose="False">
+                    <ad:LayoutAnchorablePane DockHeight="250">
+                        <ad:LayoutAnchorable Title="Navigation" ContentId="NavigationPanel" CanClose="False">
                             <local:SchedulePicker DataContext="{Binding AppointmentCollectionModel}" />
                         </ad:LayoutAnchorable>
                     </ad:LayoutAnchorablePane>
 
-                    <ad:LayoutPanel Orientation="Vertical">
+                    <ad:LayoutPanel Orientation="Horizontal">
 
-                        <ad:LayoutDocumentPane>
-                            <ad:LayoutDocument Title="Care Handbook"
-                                               ContentId="CareHandbookDocument"
-                                               CanClose="False">
-                                <local:CareHandbookView DataContext="{Binding CareHandbookDataModel}"/>
-                            </ad:LayoutDocument>
-                        </ad:LayoutDocumentPane>
+                        <ad:LayoutAnchorablePane DockWidth="*">
+                            <ad:LayoutAnchorable Title="Appointment" ContentId="AppointmentPanel" CanClose="False">
+                                <!--<panels:OutputPanelView />-->
+                            </ad:LayoutAnchorable>
+                        </ad:LayoutAnchorablePane>
 
-                        <ad:LayoutAnchorablePane DockHeight="220">
-                            <ad:LayoutAnchorable Title="Output"
-                                                 ContentId="OutputPanel"
-                                                 CanClose="False">
+                        <ad:LayoutAnchorablePane DockWidth="*">
+                            <ad:LayoutAnchorable Title="PackingList" ContentId="PackingListPanel" CanClose="False">
                                 <!--<panels:OutputPanelView />-->
                             </ad:LayoutAnchorable>
                         </ad:LayoutAnchorablePane>
 
                     </ad:LayoutPanel>
-
-                    <ad:LayoutAnchorablePane DockWidth="300">
-                        <ad:LayoutAnchorable Title="Properties"
-                                             ContentId="PropertiesPanel"
-                                             CanClose="False">
-                            <!--<panels:PropertiesPanelView />-->
-                        </ad:LayoutAnchorable>
-                    </ad:LayoutAnchorablePane>
 
                 </ad:LayoutPanel>
             </ad:LayoutRoot>

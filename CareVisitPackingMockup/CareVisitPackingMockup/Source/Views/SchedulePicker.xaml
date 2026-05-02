@@ -10,6 +10,7 @@
     <Grid>
         <syncfusion:SfScheduler x:Name="Scheduler"
                                 ViewType="Week"
+                                FirstDayOfWeek="Monday"
                                 ItemsSource="{Binding Appointments}"
                                 AppointmentTapped="Scheduler_AppointmentTapped">
 
@@ -22,6 +23,10 @@
                     Location="Location"
                     Notes="Notes" />
             </syncfusion:SfScheduler.AppointmentMapping>
+
+            <syncfusion:SfScheduler.DaysViewSettings>
+                <syncfusion:DaysViewSettings StartHour="7" EndHour="18" TimeIntervalSize="-1" />
+            </syncfusion:SfScheduler.DaysViewSettings>
 
         </syncfusion:SfScheduler>
     </Grid>
