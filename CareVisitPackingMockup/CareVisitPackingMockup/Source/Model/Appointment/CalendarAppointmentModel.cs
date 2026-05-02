@@ -27,6 +27,10 @@ namespace CareVisitPackingMockup
         public List<Guid> CareTypeIds { get; set; } = new();
 
         // Runtime binding properties - not persisted
-        public ObservableCollection<CareTypeModel> CareTypes = new();
+        public ObservableCollection<CareTypeModel> CareTypes { get; } = new();
+
+        // Generated set of packing items based on the care types - not persisted
+        [ObservableProperty]
+        private CareVisitPackingListModel careVisitPackingListModel = new();
     }
 }

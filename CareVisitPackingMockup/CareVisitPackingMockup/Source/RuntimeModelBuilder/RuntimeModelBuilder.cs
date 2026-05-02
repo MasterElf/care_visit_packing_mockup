@@ -5,6 +5,7 @@
         public static void BuildRuntimeModels(MainModel mainModel)
         {
             SetupAppointmentModels(mainModel.AppointmentCollectionModel, mainModel.CareHandbookDataModel);
+            SetupPackingListTemplateModels(mainModel.CareHandbookDataModel);
         }
 
         private static void SetupAppointmentModels(AppointmentCollectionModel appointmentCollectionModel, CareHandbookDataModel careHandbookDataModel)
@@ -20,6 +21,22 @@
                         {
                             appointment.CareTypes.Add(careType);
                         }
+                    }
+                }
+            }
+        }
+
+        private static void SetupPackingListTemplateModels(CareHandbookDataModel careHandbookDataModel)
+        {
+            foreach (CareTypeModel careType in careHandbookDataModel.CareTypes)
+            {
+                foreach (PackingListTemplateItemModel packingListTemplate in careType.PackingItems)
+                {
+                    MedicalItemModel? medicalItem = careHandbookDataModel.MedicalItemCatalogModel.Items.FirstOrDefault(mi => mi.Id == packingListTemplate.MedicalItemId);
+
+                    if (medicalItem != null)
+                    {
+                        packingListTemplate.MedicalItem = medicalItem;
                     }
                 }
             }

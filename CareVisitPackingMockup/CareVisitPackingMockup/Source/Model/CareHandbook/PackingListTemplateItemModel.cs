@@ -8,6 +8,9 @@ namespace CareVisitPackingMockup
         private Guid medicalItemId;
 
         [ObservableProperty]
+        private MedicalItemModel medicalItem = new();
+
+        [ObservableProperty]
         private int defaultQuantity;
 
         [ObservableProperty]

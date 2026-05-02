@@ -22,13 +22,13 @@
 
                         <ad:LayoutAnchorablePane DockWidth="*">
                             <ad:LayoutAnchorable Title="Appointment" ContentId="AppointmentPanel" CanClose="False">
-                                <!--<panels:OutputPanelView />-->
+                                <local:AppointmentView DataContext="{Binding AppointmentCollectionModel.SelectedAppointment}" />
                             </ad:LayoutAnchorable>
                         </ad:LayoutAnchorablePane>
 
                         <ad:LayoutAnchorablePane DockWidth="*">
                             <ad:LayoutAnchorable Title="PackingList" ContentId="PackingListPanel" CanClose="False">
-                                <!--<panels:OutputPanelView />-->
+                                <local:CareVisitPackingListView DataContext="{Binding AppointmentCollectionModel.SelectedAppointment.CareVisitPackingListModel}" />
                             </ad:LayoutAnchorable>
                         </ad:LayoutAnchorablePane>
 
