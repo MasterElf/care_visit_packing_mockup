@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace CareVisitPackingMockup
 {
@@ -21,5 +22,11 @@ namespace CareVisitPackingMockup
 
         [ObservableProperty]
         private string? notes;
+
+        // Persisted care type id properties
+        public List<Guid> CareTypeIds { get; set; } = new();
+
+        // Runtime binding properties - not persisted
+        public ObservableCollection<CareTypeModel> CareTypes = new();
     }
 }

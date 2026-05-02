@@ -25,7 +25,7 @@ namespace CareVisitPackingMockup
                 return;
             }
 
-            //mainModel.SelectedAppointment = appointment;
+            appointmentCollectionModel.SelectedAppointment = appointment;
         }
     }
 }

@@ -17,5 +17,4 @@ namespace CareVisitPackingMockup
             mainWindow.Show();
         }
     }
-
 }

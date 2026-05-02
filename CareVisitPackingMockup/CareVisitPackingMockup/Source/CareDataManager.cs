@@ -12,6 +12,9 @@
             {
                 MainModel.CareHandbookDataModel = careHandbookDataModel;
             }
+
+            // After all data is loaded, it is time to initialize the data models with runtime data.
+            RuntimeModelBuilder.BuildRuntimeModels(MainModel);
         }
     }
 }
