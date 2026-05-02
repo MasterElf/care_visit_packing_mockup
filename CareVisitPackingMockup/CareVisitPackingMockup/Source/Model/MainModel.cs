@@ -6,5 +6,7 @@ namespace CareVisitPackingMockup
     {
         [ObservableProperty]
         private CareHandbookDataModel careHandbookDataModel = new CareHandbookDataModel();
+
+        public AppointmentCollectionModel AppointmentCollectionModel { get; private set; } = new AppointmentCollectionModel();
     }
 }

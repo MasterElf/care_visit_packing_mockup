@@ -16,7 +16,7 @@
                         <ad:LayoutAnchorable Title="Navigation"
                                              ContentId="NavigationPanel"
                                              CanClose="False">
-                            <!--<panels:NavigationPanelView />-->
+                            <local:SchedulePicker DataContext="{Binding AppointmentCollectionModel}" />
                         </ad:LayoutAnchorable>
                     </ad:LayoutAnchorablePane>
 
