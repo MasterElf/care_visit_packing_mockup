@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="Page-1" id="Y1uknOQ5V1BMJH2y6W-H">
-    <mxGraphModel dx="1422" dy="898" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1966" dy="910" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -62,6 +62,102 @@
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="360" y="670" as="sourcePoint" />
             <mxPoint x="360" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" value="&lt;span style=&quot;font-family: sans-serif; font-size: 14px; text-align: start; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;AppointmentCollectionModel&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="-40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-2" edge="1" parent="1" source="DCfowUxqz11teNAZekdo-1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;shadow=1;edgeStyle=elbowEdgeStyle;" target="YQsfWVgQJPUuLz2Me0Bg-2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="380" />
+            </Array>
+            <mxPoint x="380" y="460" as="sourcePoint" />
+            <mxPoint x="380" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" value="&lt;span style=&quot;font-family: sans-serif; font-size: 14px; text-align: start; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;CalendarAppointmentModel&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="-40" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-4" edge="1" parent="1" source="DCfowUxqz11teNAZekdo-3" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;shadow=1;" target="DCfowUxqz11teNAZekdo-1" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="350" y="580" as="sourcePoint" />
+            <mxPoint x="350" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-6" edge="1" parent="1" source="YQsfWVgQJPUuLz2Me0Bg-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;shadow=1;" target="DCfowUxqz11teNAZekdo-3" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-40" y="750" as="sourcePoint" />
+            <mxPoint x="120" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-family: sans-serif; font-size: 14px; text-align: start; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;CareVisitPackingListMode&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="-40" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-8" edge="1" parent="1" source="DCfowUxqz11teNAZekdo-7" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;shadow=1;edgeStyle=elbowEdgeStyle;" target="DCfowUxqz11teNAZekdo-3" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="600" />
+            </Array>
+            <mxPoint x="100" y="650" as="sourcePoint" />
+            <mxPoint x="100" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-9" edge="1" parent="1" source="YQsfWVgQJPUuLz2Me0Bg-10" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;shadow=1;" target="DCfowUxqz11teNAZekdo-7" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="300" y="600" as="sourcePoint" />
+            <mxPoint x="220" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-10" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=19;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" value="The resulting packing list for an appointment" vertex="1">
+          <mxGeometry height="100" width="100" x="-220" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-11" edge="1" parent="1" source="DCfowUxqz11teNAZekdo-10" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" target="DCfowUxqz11teNAZekdo-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-310" y="600" as="sourcePoint" />
+            <mxPoint x="-260" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-12" edge="1" parent="1" source="YQsfWVgQJPUuLz2Me0Bg-10" style="endArrow=classic;html=1;rounded=0;shadow=1;" target="YQsfWVgQJPUuLz2Me0Bg-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="320" y="850" as="sourcePoint" />
+            <mxPoint x="370" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-13" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=19;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" value="Appointment collection" vertex="1">
+          <mxGeometry height="100" width="100" x="-220" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-14" edge="1" parent="1" source="DCfowUxqz11teNAZekdo-1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" target="DCfowUxqz11teNAZekdo-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-280" y="530" as="sourcePoint" />
+            <mxPoint x="-230" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-15" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=19;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" value="Care handbook. Collection of care types." vertex="1">
+          <mxGeometry height="100" width="100" x="520" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-16" edge="1" parent="1" source="YQsfWVgQJPUuLz2Me0Bg-3" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" target="DCfowUxqz11teNAZekdo-15" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="180" y="850" as="sourcePoint" />
+            <mxPoint x="230" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-17" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=19;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" value="Collection of medical items" vertex="1">
+          <mxGeometry height="100" width="100" x="740" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-18" edge="1" parent="1" source="YQsfWVgQJPUuLz2Me0Bg-7" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" target="DCfowUxqz11teNAZekdo-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="600" y="870" as="sourcePoint" />
+            <mxPoint x="650" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-19" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=19;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" value="Top node owning the model" vertex="1">
+          <mxGeometry height="100" width="100" x="100" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="DCfowUxqz11teNAZekdo-20" edge="1" parent="1" source="DCfowUxqz11teNAZekdo-19" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" target="YQsfWVgQJPUuLz2Me0Bg-12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="230" as="sourcePoint" />
+            <mxPoint x="560" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
