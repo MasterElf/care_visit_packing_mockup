@@ -5,7 +5,7 @@ namespace CareVisitPackingMockup
     public sealed partial class PackingListTemplateItemModel : ObservableObject
     {
         [ObservableProperty]
-        private Guid medicalItemId;
+        private Guid medicalItemId = Guid.NewGuid(); // Use a default value in case loading is faulty
 
         [ObservableProperty]
         private MedicalItemModel medicalItem = new();
