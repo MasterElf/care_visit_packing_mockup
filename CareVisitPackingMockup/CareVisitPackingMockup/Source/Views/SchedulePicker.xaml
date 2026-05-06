@@ -7,6 +7,12 @@
              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type syncfusion:TimeSlotCell}">
+            <Setter Property="Background" Value="#FFE7E7FF" />
+        </Style>
+    </UserControl.Resources>
+    
     <Grid>
         <syncfusion:SfScheduler x:Name="Scheduler"
                                 ViewType="Week"
@@ -16,12 +22,14 @@
 
             <syncfusion:SfScheduler.AppointmentMapping>
                 <syncfusion:AppointmentMapping
-                    Id="Id"
+                    Id="SchedulerId"
                     Subject="Subject"
                     StartTime="StartTime"
                     EndTime="EndTime"
                     Location="Location"
-                    Notes="Notes" />
+                    Notes="Notes"
+                    AppointmentBackground="AppointmentBackground"
+                    Foreground="Foreground" />
             </syncfusion:SfScheduler.AppointmentMapping>
 
             <syncfusion:SfScheduler.DaysViewSettings>

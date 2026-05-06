@@ -1,12 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Windows.Media;
 
 namespace CareVisitPackingMockup
 {
     public sealed partial class CalendarAppointmentModel : ObservableObject
     {
         [ObservableProperty]
-        private Guid id;
+        private object? schedulerId;
+
+        [ObservableProperty]
+        private Guid careVisitId = Guid.NewGuid();
 
         [ObservableProperty]
         private string subject = string.Empty;
@@ -22,6 +26,12 @@ namespace CareVisitPackingMockup
 
         [ObservableProperty]
         private string? notes;
+
+        [ObservableProperty]
+        private Brush appointmentBackground = Brushes.SteelBlue;
+
+        [ObservableProperty]
+        private Brush foreground = Brushes.White;
 
         // Persisted care type id properties
         public List<Guid> CareTypeIds { get; set; } = new();

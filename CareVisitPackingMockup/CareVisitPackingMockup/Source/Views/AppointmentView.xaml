@@ -70,10 +70,12 @@
                     <TextBlock Text="Notes" Style="{StaticResource CaptionTextBlockStyle}" />
                     <Border BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"
                             BorderThickness="1"
-                            Padding="10"
                             Margin="0,0,0,10">
-                        <TextBlock Text="{Binding Notes, TargetNullValue=-, FallbackValue=-}"
-                                   TextWrapping="Wrap" />
+                        <TextBox Text="{Binding Notes, TargetNullValue=-, FallbackValue=-}"
+                                 TextWrapping="Wrap"
+                                 BorderThickness="0"
+                                 Background="Transparent"
+                                 AcceptsReturn="True" />
                     </Border>
 
                     <TextBlock Text="Care types" Style="{StaticResource SectionHeaderTextBlockStyle}" />
@@ -104,29 +106,6 @@
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
-
-                    <Expander Header="Persisted care type IDs"
-                              Margin="0,16,0,0">
-                        <ItemsControl ItemsSource="{Binding CareTypeIds}"
-                                      Margin="0,8,0,0">
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding}"
-                                               FontFamily="Consolas"
-                                               FontSize="12"
-                                               TextWrapping="Wrap"
-                                               Margin="0,0,0,4" />
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
-                    </Expander>
-
-                    <TextBlock Text="{Binding Id, StringFormat={}Appointment ID: {0}}"
-                               Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
-                               FontFamily="Consolas"
-                               FontSize="12"
-                               TextWrapping="Wrap"
-                               Margin="0,20,0,0" />
                 </StackPanel>
             </Border>
         </ScrollViewer>

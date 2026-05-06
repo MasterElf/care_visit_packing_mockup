@@ -17,7 +17,7 @@ namespace CareVisitPackingMockup
 
             Appointments.Add(new CalendarAppointmentModel
             {
-                Id = Guid.NewGuid(),
+                CareVisitId = Guid.NewGuid(),
                 Subject = "Home care visit - Anna Andersson",
                 StartTime = today.AddHours(10),
                 EndTime = today.AddHours(11),
@@ -28,7 +28,7 @@ namespace CareVisitPackingMockup
 
             Appointments.Add(new CalendarAppointmentModel
             {
-                Id = Guid.NewGuid(),
+                CareVisitId = Guid.NewGuid(),
                 Subject = "Home care visit - Nils Nilsson",
                 StartTime = today.AddHours(7),
                 EndTime = today.AddHours(8),
@@ -39,7 +39,7 @@ namespace CareVisitPackingMockup
 
             Appointments.Add(new CalendarAppointmentModel
             {
-                Id = Guid.NewGuid(),
+                CareVisitId = Guid.NewGuid(),
                 Subject = "Home care visit - Knut Knutsson",
                 StartTime = today.AddDays(1).AddHours(11),
                 EndTime = today.AddDays(1).AddHours(12),

@@ -15,17 +15,10 @@ namespace CareVisitPackingMockup
 
         private void Scheduler_AppointmentTapped(object sender, AppointmentTappedArgs e)
         {
-            if (e.Appointment?.Data is not CalendarAppointmentModel appointment)
+            if (DataContext is AppointmentCollectionModel appointmentCollectionModel)
             {
-                return;
+                appointmentCollectionModel.SelectedAppointment = e.Appointment?.Data as CalendarAppointmentModel;
             }
-
-            if (DataContext is not AppointmentCollectionModel appointmentCollectionModel)
-            {
-                return;
-            }
-
-            appointmentCollectionModel.SelectedAppointment = appointment;
         }
     }
 }
