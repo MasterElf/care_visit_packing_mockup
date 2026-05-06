@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Windows.Media;
 
 namespace CareVisitPackingMockup
 {
@@ -10,9 +11,14 @@ namespace CareVisitPackingMockup
         [ObservableProperty]
         private CalendarAppointmentModel? selectedAppointment;
 
-        // TODO: Move this test data creation to a separate test data initializer class or method
         public AppointmentCollectionModel()
         {
+            CreateTestData();
+        }
+
+        private void CreateTestData()
+        {
+            // TODO: Move this test data creation to a separate test data initializer class or method
             DateTime today = DateTime.Today;
 
             Appointments.Add(new CalendarAppointmentModel
@@ -42,9 +48,10 @@ namespace CareVisitPackingMockup
                 CareVisitId = Guid.NewGuid(),
                 Subject = "Home care visit - Knut Knutsson",
                 StartTime = today.AddDays(1).AddHours(11),
-                EndTime = today.AddDays(1).AddHours(12),
+                EndTime = today.AddDays(1).AddHours(13),
                 Location = "Langö",
                 Notes = "Nothing specific.",
+                AppointmentBackground = Brushes.IndianRed,
                 CareTypeIds = new List<Guid> { Guid.Parse("22222222-2222-2222-2222-222222222222") }
             });
         }

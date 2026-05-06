@@ -22,6 +22,8 @@
 
         private void SelectedAppointment_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         { 
+            // If the selected appointment has changed, we regenerate the packing list to make it semi-dynamic.
+            // Later on, it could be fully dynamic.
             if (e.PropertyName == nameof(AppointmentCollectionModel.SelectedAppointment))
             {
                 if (sender is AppointmentCollectionModel appointmentCollectionModel)

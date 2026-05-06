@@ -13,28 +13,24 @@ namespace CareVisitPackingMockup
                 return LoadFromJson(File.ReadAllText(filePath));
             }
 
-            // TODO: Could not load a care handbook. Return an empty one.
-            return new CareHandbookDataModel();
+            return null;
         }
 
         public static CareHandbookDataModel? LoadFromJson(string json)
         {
             if (!string.IsNullOrWhiteSpace(json))
             {
-                return JsonSerializer.Deserialize<CareHandbookDataModel>(json, CreateDefaultSerializerOptions());
+                JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
+                {
+                    WriteIndented = true,
+                    PropertyNameCaseInsensitive = true,
+                    Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
+                };
+
+                return JsonSerializer.Deserialize<CareHandbookDataModel>(json, jsonSerializerOptions);
             }
 
             return null;
-        }
-
-        public static JsonSerializerOptions CreateDefaultSerializerOptions()
-        {
-            return new JsonSerializerOptions(JsonSerializerDefaults.Web)
-            {
-                WriteIndented = true,
-                PropertyNameCaseInsensitive = true,
-                Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
-            };
         }
     }
 }

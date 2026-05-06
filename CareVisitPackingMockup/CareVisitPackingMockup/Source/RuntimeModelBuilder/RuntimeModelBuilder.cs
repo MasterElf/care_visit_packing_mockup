@@ -17,6 +17,7 @@
                     foreach (Guid careTypeId in appointment.CareTypeIds)
                     {
                         CareTypeModel? careType = careHandbookDataModel.CareTypes.FirstOrDefault(ct => ct.Id == careTypeId);
+
                         if (careType != null)
                         {
                             appointment.CareTypes.Add(careType);

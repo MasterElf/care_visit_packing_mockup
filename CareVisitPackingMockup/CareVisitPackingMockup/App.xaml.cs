@@ -11,6 +11,8 @@ namespace CareVisitPackingMockup
          protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+
+            // Setup our infrastructure and main window.
             careDataManager.Initialize();
             MainWindow mainWindow = new MainWindow();
             mainWindow.DataContext = careDataManager.MainModel;
