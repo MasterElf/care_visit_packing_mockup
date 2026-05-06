@@ -9,12 +9,6 @@
              d:DesignWidth="800">
 
     <UserControl.Resources>
-        <Style x:Key="SectionHeaderTextBlockStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="16" />
-            <Setter Property="FontWeight" Value="SemiBold" />
-            <Setter Property="Margin" Value="0,0,0,8" />
-        </Style>
-
         <Style x:Key="DetailLabelTextBlockStyle" TargetType="TextBlock">
             <Setter Property="FontWeight" Value="SemiBold" />
             <Setter Property="Margin" Value="0,0,8,4" />
@@ -35,30 +29,16 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0"
-                   Text="Packing list"
-                   Style="{StaticResource SectionHeaderTextBlockStyle}" />
+        <TextBlock Grid.Row="0" Text="Packing list" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,8" />
 
-        <ListView x:Name="PackingListItemsListView"
-                  Grid.Row="1"
-                  ItemsSource="{Binding PackingItems}"
-                  SelectionMode="Single">
+        <ListView x:Name="PackingListItemsListView" Grid.Row="1" ItemsSource="{Binding PackingItems}" SelectionMode="Single">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Qty"
-                                    Width="60"
-                                    DisplayMemberBinding="{Binding DefaultQuantity}" />
+                    <GridViewColumn Header="Qty" Width="60" DisplayMemberBinding="{Binding DefaultQuantity}" />
+                    <GridViewColumn Header="Item" Width="260" DisplayMemberBinding="{Binding MedicalItem.Name}" />
+                    <GridViewColumn Header="Category" Width="160" DisplayMemberBinding="{Binding MedicalItem.Category}" />
 
-                    <GridViewColumn Header="Item"
-                                    Width="260"
-                                    DisplayMemberBinding="{Binding MedicalItem.Name}" />
-
-                    <GridViewColumn Header="Category"
-                                    Width="160"
-                                    DisplayMemberBinding="{Binding MedicalItem.Category}" />
-
-                    <GridViewColumn Header="Mandatory"
-                                    Width="90">
+                    <GridViewColumn Header="Mandatory" Width="90">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <CheckBox IsChecked="{Binding IsMandatory}"
@@ -92,39 +72,26 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Row="0"
-                           Grid.Column="0"
-                           Text="Selected item:"
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Selected item:"
                            Style="{StaticResource DetailLabelTextBlockStyle}" />
-                <TextBlock Grid.Row="0"
-                           Grid.Column="1"
+                <TextBlock Grid.Row="0" Grid.Column="1"
                            Text="{Binding MedicalItem.Name, TargetNullValue='Select an item in the list above.'}"
                            Style="{StaticResource DetailValueTextBlockStyle}" />
 
-                <TextBlock Grid.Row="1"
-                           Grid.Column="0"
-                           Text="Quantity:"
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Quantity:"
                            Style="{StaticResource DetailLabelTextBlockStyle}" />
-                <TextBlock Grid.Row="1"
-                           Grid.Column="1"
+                <TextBlock Grid.Row="1" Grid.Column="1"
                            Text="{Binding DefaultQuantity}"
                            Style="{StaticResource DetailValueTextBlockStyle}" />
 
-                <TextBlock Grid.Row="2"
-                           Grid.Column="0"
-                           Text="Reason:"
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Reason:"
                            Style="{StaticResource DetailLabelTextBlockStyle}" />
-                <TextBlock Grid.Row="2"
-                           Grid.Column="1"
-                           Text="{Binding Reason}"
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Reason}"
                            Style="{StaticResource DetailValueTextBlockStyle}" />
 
-                <TextBlock Grid.Row="3"
-                           Grid.Column="0"
-                           Text="Description:"
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Description:"
                            Style="{StaticResource DetailLabelTextBlockStyle}" />
-                <TextBlock Grid.Row="3"
-                           Grid.Column="1"
+                <TextBlock Grid.Row="3" Grid.Column="1"
                            Text="{Binding MedicalItem.Description}"
                            Style="{StaticResource DetailValueTextBlockStyle}" />
             </Grid>
